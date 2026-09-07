@@ -28,6 +28,7 @@ def list_remote_files():
     cmd = [
         config.RCLONE_BINARY,
         "lsjson",
+        "-R",
         config.RCLONE_REMOTE,
     ]
     result = subprocess.run(cmd, capture_output=True, text=True)
